@@ -9,7 +9,7 @@
             "min" : 67
         },
         {
-            "grade" : "5",
+            "grade" : 5,
             "min" : "50"
         },
         {
@@ -164,19 +164,19 @@
             "min" : 50
         },
         {
-            "grade" : "4",
+            "grade" : 4,
             "min" : 38
         },
         {
-            "grade" : "3",
+            "grade" : 3,
             "min" : 25
         },
         {
-            "grade" : "2",
+            "grade" : 2,
             "min" : 12
         },
         {
-            "grade" : "1",
+            "grade" : 1,
             "min" : 0
         }
     ]
