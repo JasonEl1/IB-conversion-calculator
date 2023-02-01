@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="conversionCalc.css">
+    <script src="conversionCalc.js" defer></script>
+    <title>IB Conversion Calculator</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <div class="title">
+        <h1>IB Conversion Calculator</h1>
+        <p>Converts your raw percentage to your final grade</p>
+    </div>
+
+    <div class="enter-and-choose">
+        <form>
+            <input type="text" placeholder="Enter raw percent" id="rawPercent">
+            <select name="languages" id="subject">
+              <option value="chemistry-hl">Chemistry HL</option>
+              <option value="history-hl">History HL</option>
+              <option value="physics-sl">Physics SL</option>
+              <option value="math-sl">Math SL</option>
+              <option value="french-sl">French SL</option>
+              <option value="english-hl">English HL</option>
+            </select>
+        </form>
+    </div>
+
+    <div class="calc-button">
+
+        <button id="Cbutton">Calculate</button>
+
+    </div>
+
+    <div class="result">
+
+        <h2 id="resultVal">Your result is : </h2>
+
+    </div>
+
+</body>
+</html>
