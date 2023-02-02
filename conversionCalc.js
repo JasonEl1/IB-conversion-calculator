@@ -7,6 +7,8 @@ function calc() {
     let subject = document.getElementById("subject").value;
     let rawPC = document.getElementById("rawPercent").value;
 
+    const IBSO_table = ["<50%","50% - 60%","61% - 71%", "72% - 83%", "84% - 92%", "93% - 96%", "97% - 100%"];
+
     fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -35,7 +37,9 @@ function calc() {
 
         }
 
-        document.getElementById("resultVal").innerHTML="Your result is : " + level;
+        let finalPC = IBSO_table[level-1];
+
+        document.getElementById("resultVal").innerHTML="Your result is : " + finalPC;
 
     });
 
