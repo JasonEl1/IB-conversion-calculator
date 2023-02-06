@@ -2,12 +2,15 @@ const url = 'https://raw.githubusercontent.com/MTN73/IB-conversion-calculator/ma
 
 document.getElementById("Cbutton").addEventListener("click",calc);
 
+
 function calc() {
+
+    const IBSO_table = ["<50%","50% - 60%","61% - 71%", "72% - 83%", "84% - 92%", "93% - 96%", "97% - 100%"];
 
     let subject = document.getElementById("subject").value;
     let rawPC = document.getElementById("rawPercent").value;
 
-    const IBSO_table = ["<50%","50% - 60%","61% - 71%", "72% - 83%", "84% - 92%", "93% - 96%", "97% - 100%"];
+    if(rawPC >=0 && rawPC <= 100){
 
     fetch(url)
     .then(response => response.json())
@@ -22,14 +25,12 @@ function calc() {
 
             if(rawPC>=thresholds[i] && rawPC<thresholds[i+1]){
 
-                console.log(i+1);
                 level = i+1;
                 break;
 
             }
             else if(i==6 && rawPC>=thresholds[i]){
 
-                console.log(i+1);
                 level = i+1;
                 break;
 
@@ -42,5 +43,12 @@ function calc() {
         document.getElementById("resultVal").innerHTML="Your result is : " + finalPC;
 
     });
+
+}
+else{
+
+alert("Invalid input");
+
+}
 
 }
