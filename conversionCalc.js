@@ -24,16 +24,12 @@ function calc() {
         for(let i = 0;i<7;i++){
 
             if(rawPC>=thresholds[i] && rawPC<thresholds[i+1]){
-
                 level = i+1;
                 break;
-
             }
             else if(i==6 && rawPC>=thresholds[i]){
-
                 level = i+1;
                 break;
-
             }
 
         }
@@ -43,12 +39,8 @@ function calc() {
         document.getElementById("resultVal").innerHTML="Your result is : " + finalPC;
 
     });
-
 }
 else{
-
-alert("Invalid input");
-
+    alert("Invalid input");
 }
-
 }
