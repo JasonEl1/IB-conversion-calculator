@@ -2,6 +2,13 @@ const url = 'https://raw.githubusercontent.com/MTN73/IB-conversion-calculator/ma
 
 document.getElementById("Cbutton").addEventListener("click",calc);
 
+document.addEventListener("keydown",(event) =>{
+    if(event.key=="Enter"){
+        document.getElementById("rawPercent").blur();
+        calc();
+    }
+});
+
 
 function calc() {
 
@@ -36,7 +43,7 @@ function calc() {
 
         let finalPC = IBSO_table[level-1];
 
-        document.getElementById("resultVal").innerHTML="Your result is : " + finalPC;
+        document.getElementById("resultVal").innerHTML="Your result is : " + finalPC + " [Level " + level +"]";
 
     });
 }
