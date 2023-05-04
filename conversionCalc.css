@@ -38,4 +38,5 @@ body {
     background-color: rgb(237, 201, 154);
     margin: auto;
     text-align: center;
+    white-space: nowrap;
 }
