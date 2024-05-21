@@ -1,4 +1,4 @@
-const url = 'https://raw.githubusercontent.com/MTN73/IB-conversion-calculator/main/conversions.json';
+const url = 'https://raw.githubusercontent.com/JasonEl1/IB-conversion-calculator/main/conversions.json';
 
 document.getElementById("Cbutton").addEventListener("click",calc);
 
