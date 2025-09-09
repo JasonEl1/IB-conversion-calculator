@@ -1,47 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset=“UTF-8”>
-    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
-    
-    <link rel="stylesheet" media="screen and (min-width: 600px)" href="conversionCalc.css">
-    <link rel="stylesheet" media="screen and (max-width: 599px)" href="mobile.css">
-    <script src="conversionCalc.js" defer></script>
-    <title>IB Conversion Calculator</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
+    <head>
+        <meta charset="“UTF-8”" />
+        <meta
+            name="“viewport”"
+            content="“width"
+            ="device-width,"
+            initial-scale="1.0”"
+        />
 
-    <div class="title">
-        <h1><a href="https://github.com/MTN73/IB-conversion-calculator" style="text-decoration: none;">IB Conversion Calculator</a></h1>
-        <p>Converts your raw percentage to your final grades using <a href="https://dl.ibdocs.re/api/IB%20DOCUMENTS/Grade%20Boundaries/May%202023%20Grade%20Boundaries.pdf">May 2023 grade boundaries</a>.</p>
-    </div>
+        <link
+            rel="stylesheet"
+            media="screen and (min-width: 600px)"
+            href="conversionCalc.css"
+        />
+        <link
+            rel="stylesheet"
+            media="screen and (max-width: 599px)"
+            href="mobile.css"
+        />
+        <script src="conversionCalc.js" defer></script>
+        <title>IB Conversion Calculator</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    </head>
+    <body>
+        <div class="title">
+            <h1>
+                <a
+                    href="https://github.com/MTN73/IB-conversion-calculator"
+                    style="text-decoration: none"
+                    >IB Conversion Calculator</a
+                >
+            </h1>
+            <p>
+                Converts your raw percentage to a final grade using grade
+                boundaries of your choice.
+            </p>
+        </div>
 
-    <div class="enter-and-choose">
-        <form>
-            <input type="text" placeholder="Enter raw percent" id="rawPercent">
-            <select name="languages" id="subject">
-              <option value="chemistry-hl">Chemistry HL</option>
-              <option value="history-hl">History HL</option>
-              <option value="physics-sl">Physics SL</option>
-              <option value="math-sl">Math SL</option>
-              <option value="french-sl">French SL</option>
-              <option value="english-hl">English HL</option>
-            </select>
-        </form>
-    </div>
+        <div class="enter-and-choose">
+            <form>
+                <input
+                    type="text"
+                    placeholder="Enter raw percent"
+                    id="rawPercent"
+                />
+                <select name="languages" id="subject">
+                    <option value="chemistry-hl">Chemistry HL</option>
+                    <option value="history-hl">History HL</option>
+                    <option value="physics-sl">Physics SL</option>
+                    <option value="math-sl">Math SL</option>
+                    <option value="french-sl">French SL</option>
+                    <option value="english-hl">English HL</option>
+                </select>
+                <select id="conversions">
+                    <option value="may-2023-tz1">May 2023 TZ1</option>
+                </select>
+            </form>
+        </div>
 
-    <div class="calc-button">
+        <div class="calc-button">
+            <button id="Cbutton">Calculate</button>
+        </div>
 
-        <button id="Cbutton">Calculate</button>
-
-    </div>
-
-    <div class="result">
-
-        <h2 id="resultVal">Your result is : </h2>
-
-    </div>
-
-</body>
+        <div class="result">
+            <h2 id="resultVal">Your result is :</h2>
+        </div>
+    </body>
 </html>
